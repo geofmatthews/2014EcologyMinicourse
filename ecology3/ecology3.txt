@@ -1,0 +1,624 @@
+%%% spell check: 
+%%%% handouts:  pdfjam --landscape --nup '2x2' ecology2.pdf
+
+%\documentclass[handout]{beamer}
+\documentclass[10pt]{beamer}
+\usepackage{parskip}
+\setlength{\parskip}{1.75ex}
+
+\mode<presentation>
+{\usetheme{Singapore}
+\setbeamercovered{transparent}}
+
+\title{R Minicourse Workshop, Part 2}
+
+\author{\small Presented to the\\
+        Washington State Deptment of Ecology\\
+       September 2--3, 2014}
+
+\date{\scriptsize Dr.~Robin Matthews, Institute for Watershed Studies\\
+   Dr. Geoffrey Matthews, Computer Science Department\\
+   Western Washington University}
+
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{footline}{\hspace*{5ex}Part 2 - Sept.~2, 2014 
+   \hfill Page \insertframenumber \hspace{0.1ex} of
+   \inserttotalframenumber \hspace*{5ex}
+   \vspace*{2ex}}
+
+\begin{document}
+\lecture{R Minicourse}{Section 2}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Graphical Presentation of Environmental Data}
+\framesubtitle{How {\color{red} \em NOT} to Lie with Statistics}
+\bi
+\item One of the most important goals of research is to provide clear
+  and unbiased summaries of the data
+
+\item Unfortunately, it is all too easy to obscure important elements from
+  research, intentionally or unintentionally
+
+\item This portion of the {\color{red} \tt R-minicourse} will focus on
+  creating effective graphical output while avoiding some of the
+  more common problems
+
+{\scriptsize
+For more on this topic:\\
+{\em How to Lie with Charts} by Gerald Everett Jones (ISBN--13 978--1419651434)\\
+
+\vspace{1ex}{\em Now You See It: Simple Visualization Techniques for
+  Quantitative Analysis} by Stephen Few (ISBN--13
+978--0970601988)\\
+
+\vspace{1ex}{\em Information Dashboard Design: Displaying Data for
+  At-a-Glance Monitoring} by Stephen Few (ISBN--13
+978--1938377006)\\ }
+\ei
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Principles of Scientific Visualization}
+\framesubtitle{Memory Used for Processing Visual Information}
+
+We use three basic types of memory to process
+  scientific information:
+
+\bi
+\item {\color{blue} \em Iconic memory} ({\em pre-attentive
+  processing}) for detecting visual information
+
+\item {\color{blue} \em Short-term memory} ({\em attentive or
+  perceptual processing}) for temporary (limited) storage and is
+  limited to $\sim$3--9 items
+
+\item {\color{blue} \em Long-term memory} for retaining information
+
+            \bi
+            {\scriptsize
+            \item Long-term memory can be created consciously or unconsciously
+            
+            \vspace{1ex}
+            \item Information is stored more permanently, with cross-links
+              that allow access back into short-term memory
+            
+            \vspace{1ex}
+            \item Required for recognizing images, interpreting words and
+              numbers, understanding context\\
+            }
+            \ei
+\ei
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Principles of Scientific Visualization}
+\framesubtitle{Pre-Attentive Processing of Visual Information}
+
+\bi 
+\item {\color{blue} Iconic memory} provides quick, subconscious
+  processing of graphical information and is influenced by variations
+  in: 
+\bi
+  \item form
+  \item color
+  \item spatial position
+  \item motion
+  \ei
+
+\item Graphics that make use of these features tend to make a strong
+  impression on us, even when we don't know why
+
+\ei
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Principles of Scientific Visualization}
+\framesubtitle{Examples of Pre-Attentive Processing in Graphics}
+
+\begin{center}
+\resizebox{3.5in}{!}{
+\includegraphics{./part2figures/form.eps}}
+\end{center}
+{\tiny Figures modified from {\color{blue} Show Me The Numbers} by Stephen Few, Analytics Press, 2004\\ }
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Principles of Scientific Visualization}
+\framesubtitle{Example of Pre-Attentive Processing in Tables}
+
+{\scriptsize
+\begin{center}
+\begin{tabular}{cccccccccccc}
+\multicolumn{12}{c}{How many zeros are there?}\\
+6     & 4    & 4    & 2    & 1    & 5    & 7    & 2    & 2    & 2    & 2    & 8    \\
+9     & 8    & 9    & 3    & 6    & 5    & 5    & 5    & 7    & 8    & 7    & 6    \\
+1     & 3    & 5    & 9    & 5    & 6    & 0    & 6    & 7    & 6    & 6    & 6    \\
+7     & 4    & 2    & 5    & 7    & 7    & 1    & 5    & 5    & 5    & 4    & 2   \\
+5     & 2    & 1    & 1    & 4    & 2    & 6    & 6    & 4    & 9    & 6    & 3    \\
+5     & 7    & 2    & 0    & 6    & 1    & 6    & 8    & 0    & 6    & 0    & 2    \\
+9     & 8    & 7    & 4    & 4    & 5    & 4    & 4    & 9    & 1    & 5    & 1    \\
+2     & 1    & 3    & 7    & 8    & 6    & 2    & 0    & 2    & 9    & 4    & 9    \\
+3     & 4    & 9    & 6    & 2    & 1    & 7    & 9    & 4    & 8    & 2    & 8    \\
+2     & 5    & 5    & 2    & 2    & 4    & 5    & 5    & 8    & 7    & 1    & 5    \\
+\end{tabular}
+\end{center}
+}
+
+{\scriptsize
+\begin{center}
+\begin{tabular}{cccccccccccc}
+\multicolumn{12}{c}{How many zeros are there?}\\
+6     & 4    & 4    & 2    & 1    & 5    & 7    & 2    & 2    & 2    & 2    & 8    \\
+9     & 8    & 9    & 3    & 6    & 5    & 5    & 5    & 7    & 8    & 7    & 6    \\
+1     & 3    & 5    & 9    & 5    & 6    & {\bf \small \color{red}0}    & 6    & 7    & 6    & 6    & 6    \\
+7     & 4    & 2    & 5    & 7    & 7    & 1    & 5    & 5    & 5    & 4    & 2   \\
+5     & 2    & 1    & 1    & 4    & 2    & 6    & 6    & 4    & 9    & 6    & 3    \\
+5     & 7    & 2    & {\bf \small \color{red}0}    & 6    & 1    & 6    & 8    & {\bf
+  \small \color{red}0}    & 6    & {\bf \small \color{red}0}    & 2    \\
+9     & 8    & 7    & 4    & 4    & 5    & 4    & 4    & 9    & 1    & 5    & 1    \\
+2     & 1    & 3    & 7    & 8    & 6    & 2    & {\bf \small \color{red}0}    & 2    & 9    & 4    & 9    \\
+3     & 4    & 9    & 6    & 2    & 1    & 7    & 9    & 4    & 8    & 2    & 8    \\
+2     & 5    & 5    & 2    & 2    & 4    & 5    & 5    & 8    & 7    & 1    & 5    \\
+\end{tabular}
+\end{center}
+}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Principles of Scientific Visualization}
+\framesubtitle{Perceptual Processing of Visual Information}
+
+\bi 
+\item {\color{blue} Short-term} and {\color{blue} long-term
+  memory} require conscious interpretation of visual information
+
+\item As a result, it is easy to fool our visual perception of data,
+  especially if you use pre-attentive processing
+
+\item In creating scientific graphics, careful use
+  of color, shape, and position can {\large \bf \color{red}
+  emphasize} or {\tiny \color{yellow} de-emphasize} information
+
+\item Two major objectives in designing good tables or figures:
+
+\bi
+\item Highlight the data by enhancing ``data ink'' (reduce non-data ink)
+\item Organize the data by grouping, prioritizing, and sequencing
+\ei
+\ei
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Principles of Scientific Visualization}
+\framesubtitle{Perceptual Processing of Visual Information}
+
+\bi 
+\item Short-term and long-term memory involves
+  conscious interpretation of visual information
+
+\item As a result, it is easy to fool our visual perception of data,
+  especially if you use pre-attentive processing
+
+\item In creating scientific graphics, careful use of color, shape,
+  and position can emphasize or de-emphasize information
+
+\item {\color{red} Two major objectives} in designing good tables or
+  figures:
+
+\bi
+\item {\color{blue} Highlight the data} by enhancing ``data ink''
+  (reduce non-data ink)
+\item {\color{blue} Organize the data} by grouping, prioritizing, and sequencing
+\ei
+\ei
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Building Simple Scatterplots Using {\color{red} \tt plot()}}
+\label{figTP1}
+\vspace*{2ex}
+{\scriptsize
+One of the most versatile plotting tools in {\color{red} \tt R}
+  is the {\color{red} \tt plot()} function. In its simplest form, it
+  can be used with very little modification to explore the data\\
+If necessary, re-enter {\color{red} \tt read.table("lakes.csv", T, sep=","); attach(lakes)}
+}
+
+\vspace*{-4ex}
+\begin{center}
+\resizebox{3in}{!}{
+\includegraphics{./part2figures/tp1.ps}}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Plotting One Variable Using Points, Lines, or Both}
+\label{figTP2}
+\vspace*{-2ex}
+\begin{center}
+\resizebox{3.5in}{!}{
+\includegraphics{./part2figures/tp2.ps}}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Changing Colors, Characters, Lines}
+\label{figTP3}
+\vspace*{-2ex}
+\begin{center}
+\resizebox{3.5in}{!}{
+\includegraphics{./part2figures/tp3.ps}}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Saving and Copying {\color{red} \tt R} Figures}
+
+{\small
+\bi
+\item {\color{red} \tt R} figures are directed to the graphics
+  window
+
+\item Individual figures can be saved or copied from this window -
+  select ``emf'' to minimize pixelation
+
+\item Each new figure overwrites the previous one unless you direct
+  {\color{red} \tt R} to pause between figures:
+
+{\scriptsize \color{red}
+\verb%par(ask=T}) ### graphics window freezes between plots%\\
+\verb%            ### hit any key to see next figure%\\
+\verb%par(ask=F)  ### unfreezes graphics window%\\
+}
+
+\item A better approach is to save the output using a source file
+
+{\scriptsize
+$\Rightarrow$This would be a good time to use source files
+({\color{red} \tt R-minicourse}, Part 1)\\}
+
+\item The syntax for saving graphical output varies slightly for
+  different operating systems; use {\color{red}
+    \tt savePlot} for Windows:
+
+{\scriptsize \color{red}
+\verb%plot(tp, chl)%\\
+\verb%savePlot(filename = "simpleplot", type="emf")%\\
+\verb%#### type="pdf" also produces nice figures%\\
+}
+\ei 
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Plotting One Variable vs.~Time}
+
+\vspace{2ex} 
+
+{\scriptsize We usually want an informative x-axis rather than the row
+  number (Index).  It is very simple to add month (column 2) and year
+  (column 4)\\}
+
+\vspace*{-1ex}
+\begin{center}
+\resizebox{3in}{!}{
+\includegraphics{./part2figures/tp4.ps}}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Plotting Time Using the {\color{red} \tt chron} Library}
+
+\bi
+\item One of the most powerful features of {\color{red} \tt R} is
+  that it is open-source and programmable, so individuals can
+  contribute {\em libraries} or {\em packages} containing specialized
+  programs
+
+\item The {\color{red} \tt chron} library is designed to recognize
+  time in a variety of formats, and is easily integrated with other
+  functions like {\color{red} \tt plot()}
+
+\item $\Rightarrow$The {\color{red} \tt chron} may need to be
+  installed on your computer.  Click on ``install package'' at the top
+  of the R window, select USA (WA1) as the mirror\footnote{\scriptsize
+    Mirrors are sites that maintain exact copies of R libraries.\\},
+  then scroll down until you find {\color{red} \tt chron}.  It should
+  install automatically.
+
+\item Before you can use the library you need to tell {\color{red} \tt
+  R} to read the library:
+
+{\scriptsize \color{red} 
+\verb%library(chron) ### this will load chron during your work session%\\
+\verb%library()      ### this lists all active libraries%\\
+}
+
+\ei
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Using the {\color{red} \tt chron} Library, continued}
+
+\bi
+\item The IWS policy is to keep month, day, year ($\pm$time) in
+  separate columns to minimize spreadsheet date conversion errors
+
+\item But {\color{red} \tt chron} expects the date to be in typical
+  spreadsheet format (month/day/year and hour:min:sec), so we use a
+  function to paste the columns together:
+
+{\scriptsize \color{red}
+\verb%mdy.chron <- function(month, day, year) {%\\
+\verb%  chron(dates.=paste(month, day, year, sep="/"))%\\
+\verb%}%\\
+}
+
+\item Now we can use {\color{red} \tt mdy.chron(month, day, year)} as
+  a variable for the x-axis (see figure on page \pageref{chronfig})
+
+{\scriptsize \color{red}
+\verb%plot(tp ~ mdy.chron(month, day, year))%\\
+}
+\ei
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Using the {\color{red} \tt chron} Library, continued}
+
+Here is a more advanced example (see figure on page
+\pageref{chronfig})
+
+{\scriptsize \color{red}
+\verb%#### Create a "nice" date range for the x-axis%\\
+\verb%xdates = c(mdy.chron(1,1,2007), mdy.chron(12, 31, 2013))%\\
+
+\vspace{2ex}
+\verb%#### Plot the data, with x/y axis labels and annotations%\\
+\verb%plot(tp ~ mdy.chron(month, day, year),%\\
+\verb%     xlim=xdates,%\\
+\verb%     xlab=" ",%\\
+\verb%     ylim=c(0, 1000),%\\
+\verb%     ylab=expression(paste("TP " (mu * "g-P/L"))),%\\
+\verb%     pch=21, bg="skyblue", cex=1.5)%\\
+
+\vspace{2ex}
+\verb%#### Add a text line to identify the outlier%\\
+\verb%text(x=mdy.chron(6,28,2010), y=850, "Wiser Lake, June 28, 2010",%\\
+\verb%     cex=0.75, col="red")%\\
+}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\label{chronfig}
+\begin{center}
+\resizebox{3in}{!}{
+\includegraphics{./part2figures/tp5.ps}}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Plotting Two Variables Using {\color{red} \tt plot()}}
+\vspace*{-3ex}
+\begin{center}
+\resizebox{3.5in}{!}{
+\includegraphics{./part2figures/tp6.ps}}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Adding Layers to Scatterplots}
+
+linear models
+legends
+abline
+rect
+points
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Advanced Scatterplots:  Regression with 95\% CI}
+\framesubtitle{Predicting Chlorophyll as a Function of Alkalinity}
+
+{\color{red} \tiny
+\begin{verbatim}
+##### Step 1:  create linear model (chl ~ alk)
+alkchl.lm = lm(log10(chl) ~ alk)
+
+##### Step 2:  sort the x axis (unique values only)
+alk.sort = sort(unique(alk))
+
+##### Step 3:  use predict to predict chl ~ tp from linear model
+pred.chl = predict(alkchl.lm, 
+    newdata = data.frame(alk = alk.sort), int="pred")
+
+##### Step 4:  plot original data and linear model
+plot(log10(chl) ~ alk,
+     xlab="Alkalinity (mg/L)",
+     ylab=expression(paste("Log10 Chlorophyll " (mu * "g/L"))),
+     pch=21, bg="skyblue", cex=1.5)
+abline(alkchl.lm, lwd=2, lty=2, col="red")
+
+##### Step 5:  add upper and lower CI
+lines(alk.sort, pred.chl[,2], lty=2) #lower CI
+lines(alk.sort, pred.chl[,3], lty=2) #upper CI
+
+##### Step 6:  add a legend with the linear model statistics
+legend(x="topleft", 
+   c(paste("Log10 Chl =", round(alkchl.lm$coef[2],4), 
+     "* Alk + ", round(alkchl.lm$coeff[1],4)),
+    paste("Adj.R-squared =", round(summary(alkchl.lm)$adj.r.squared, 4)),
+    paste("P-value =", round(summary(alkchl.lm)$coef[8], 4))),
+    bty="n", cex=1) 
+text(17, 2.3, "(P-value <0.00001 =>rounds to 0)", col="red", bty="n", cex=0.7)
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{center}
+\resizebox{3.5in}{!}{
+\includegraphics{./part2figures/advanced1.ps}}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Exercise \#1 - Creating Annotated Scatterplots}
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{Summary of Scatterplot Syntax}
+
+{\scriptsize
+\begin{center}
+\begin{tabular}{ll}\hline
+{\color{red} \tt plot(x, y)}  
+        & type=points (p), lines (l), both (b), overplot (o)\\
+{\color{red} \tt xlim} \hspace{0.5ex} {\color{red} \tt ylim}
+        & set x- or y-limits (e.g., xlim=c(0, 100))\\
+{\color{red} \tt xlab} \hspace{1ex} {\color{red} \tt ylab} \hspace{1ex} {\color{red} \tt main} 
+        & define main, x- or y-labels (e.g., xlab="Year");\\
+        & can include spaces, etc\\
+{\color{red} \tt pch} & plotting characters (1-16 regular; 21-25 dual color)\\
+{\color{red} \tt lty} \hspace{0.5 ex} {\color{red} \tt lwd}
+        & line type and line width\\
+{\color{red} \tt col} 
+        & main plotting color; subgroups can be specified (e.g., col.axis)\\
+{\color{red} \tt cex}
+        & character expansion; subgroups can be specified (e.g., cex.axis)\\
+{\color{red} \tt bg} & background color; defines inside color for pch 21-25\\
+                 & \\
+{\color{red} \tt abline} & Add lines to existing plot\\
+                 & \hspace{3ex} h or v = numerical value (horizontal/vertical lines)\\
+                 & \hspace{3ex} a, b = intercept and slope (0,1 for 1:1 diagonal)\\
+                 & \hspace{3ex} {\color{red} \tt lm} object (regression line)\\
+                 & \\
+{\color{red} \tt rect} \hspace{0.5ex} {\color{red} \tt polygon} \hspace{0.5ex} {\color{red} \tt segments}
+                & Add rectangles, polygons, line segments to existing plot\\
+                & \\
+{\color{red} \tt legend} \hspace{0.5ex} {\color{red} \tt text}
+                & Add legends or text to existing plot\\
+                & \\
+misc             & NA color=transparant\\
+                 & NA pch = no plotting character\\ 
+{\color{red} \tt ?par} \hspace{0.5ex} {\color{red} \tt ?points} \hspace{0.5ex}
+                   {\color{red} \tt plot} \hspace{0.5ex} {\color{red} \tt ?lines} 
+                   & help screen for plotting parameters\\\hline
+\end{tabular}
+
+
+
+\end{center}
+}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Simple Boxplots}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Plotting Features}
+
+{\small
+\begin{center}
+\begin{tabular}{|l|l|}\hline
+
+
+Default Values            & Description \\ \hline
+{\color{red} \tt boxwex}  & Use to scale the width of the boxes; \\
+                          & \hspace{3ex} use values $<$1 but $>$0 for narrower boxes\\
+{\color{red} \tt border}  & Use to add colors to the box borders (see iris examples)\\
+{\color{red} \tt col}     & Use to add colors to the boxes (see iris examples) \\
+{\color{red} \tt names}   & Use to add group labels (see iris examples)\\
+{\color{red} \tt notch}   & {\color{red} \tt notch=T} will add notches\\
+{\color{red} \tt plot}    & {\color{red} \tt plot=F} suppresses plotting, but lists statistics\\
+{\color{red} \tt range}   & {\color{red} \tt range=0} will extend whiskers to max/min values\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Overlay Plots}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Dual Axis Plots}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Univariate and Bivariate Plotting - Iris Data}
+\framesubtitle{Helpful Formatting Commands for Simple Boxplots}
+
+{\small
+\begin{center}
+\begin{tabular}{|l|l|}\hline
+Default Values            & Description \\ \hline
+{\color{red} \tt boxwex}  & Use to scale the width of the boxes; \\
+                          & \hspace{3ex} use values $<$1 but $>$0 for narrower boxes\\
+{\color{red} \tt border}  & Use to add colors to the box borders (see iris examples)\\
+{\color{red} \tt col}     & Use to add colors to the boxes (see iris examples) \\
+{\color{red} \tt names}   & Use to add group labels (see iris examples)\\
+{\color{red} \tt notch}   & {\color{red} \tt notch=T} will add notches\\
+{\color{red} \tt plot}    & {\color{red} \tt plot=F} suppresses plotting, but lists statistics\\
+{\color{red} \tt range}   & {\color{red} \tt range=0} will extend whiskers to max/min values\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\end{frame}
+
+
+\end{document}
+\end

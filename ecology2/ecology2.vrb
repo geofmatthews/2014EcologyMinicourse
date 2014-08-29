@@ -1,0 +1,31 @@
+\frametitle {Summary of Boxplot Syntax}
+
+{\footnotesize
+\begin{tabular}{ll}
+Syntax                    & Description \\ \hline
+\multicolumn{2}{l}{Syntax for changing widths}\\
+{\color{red} \tt boxwex}  & Set scale for all boxes; values $<$1 make boxes narrower\\
+{\color{red} \tt staplewex} & Set scale width of staple line; proportional to box width\\
+{\color{red} \tt outwex}  & Set scale width of outlier line; proportional to box width \\
+                          & \\
+\multicolumn{2}{l}{Syntax for changing colors}\\
+{\color{red} \tt border}  & Use to add colors to the box borders (see iris examples)\\
+{\color{red} \tt col}     & Use to add colors to the boxes (see iris examples) \\
+                          & \\
+\multicolumn{2}{l}{Syntax for adding features}\\
+{\color{red} \tt names}   & Use to add group labels (see iris examples)\\
+{\color{red} \tt notch}   & {\color{red} \tt notch=T} will add notches\\
+{\color{red} \tt range}   & Defines range for boxplot whiskers; default=1.5 $\times$box width;\\
+                          & {\color{red} \tt range=0} will extend whiskers to max/min values\\
+                          & \\
+\multicolumn{2}{l}{Misc}\\
+{\color{red} \tt add}     & {\color{red} \tt add=TRUE} will add boxplot to current plot\\
+{\color{red} \tt at}      & Box locations; when {\color{red} \tt add=TRUE},
+                            {\color{red} \tt at} = 1:n (n=number of boxes)\\
+{\color{red} \tt plot}    & {\color{red} \tt plot=F} suppresses plotting, but lists statistics\\\hline
+\end{tabular}
+
+Also see scatterplot syntax (page \pageref{scatterplotsyntax})
+
+}
+

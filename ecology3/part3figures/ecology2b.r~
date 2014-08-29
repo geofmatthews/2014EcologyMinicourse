@@ -1,0 +1,40 @@
+#### Box-Cox procedure to find best power transformation (SPSS m-factor)
+X = c(1:10)
+Y = c(0.021,0.671,1.094,1.390,1.602,1.792,1.950,2.085,2.201,2.311)
+Yfit = lm(Y~X)
+
+library(MASS)
+Yfit.bc = boxcox(Yfit)
+Yfit.bc$x[which.max(Yfit.bc$y)]
+
+Yfit.trans <- lm(Y^2 ~X)
+
+op=par(mfrow=c(2,2))
+plot(Y ~ X, main="Y vs X, untransformed",
+     pch=21, bg="red", cex=1.5)
+abline(Yfit, lwd=2, lty=2, col="red")
+legend(x="topleft", c(paste("Y =", round(Yfit$coef[2],4),
+         "* X + ", round(Yfit$coef[1], 4)),
+         paste("Adj.R-squared =", round(summary(Yfit)$adj.r.squared, 4)),
+         paste("p-value =", round(summary(Yfit)$coef[8], 4))),
+         bty="n", cex=0.7)
+plot(Yfit$fitted.values, resid(Yfit), main="Untransformed residuals",
+     pch=21, bg="red", cex=1.5,
+     xlab="Fitted Values", ylab="Residuals")
+abline(h=0, lwd=2, lty=2, col="red")
+
+plot(Y^2 ~ X, main="Y^2 vs X",
+     pch=21, bg="red", cex=1.5)
+abline(Yfit.trans, lwd=2, lty=2, col="red")
+legend(x="topleft", c(paste("Y^2 =", round(Yfit.trans$coef[2],4),
+         "* X ", round(Yfit.trans$coef[1], 4)),
+         paste("Adj.R-squared =", round(summary(Yfit.trans)$adj.r.squared, 4)),
+         paste("p-value =", round(summary(Yfit.trans)$coef[8], 4))),
+         bty="n", cex=0.7)
+plot(Yfit.trans$fitted.values, resid(Yfit.trans), main="Transformed residuals",
+     pch=21, bg="red", cex=1.5,
+     xlab="Fitted Values", ylab="Residuals")
+abline(h=0, lwd=2, lty=2, col="red")
+
+dev.print(postscript, "Y2bc.ps", horizontal=F, paper="letter")
+par(op)

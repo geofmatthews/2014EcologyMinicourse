@@ -1,0 +1,39 @@
+\frametitle {Nonparametric Alternatives to ANOVA}
+
+\bi
+\item The Kruskal-Wallis rank sum test ({\color{red} \tt
+  kruskal.test}), paired with the Wilcoxon rank sum test ({\color{red}
+  \tt pairwise.wilcox.test}) will provide a nonparametric alternative
+  to ANOVA
+
+\item For {\em untransformed} heteroscedastic data, the nonparametric
+  results are usually far more useful than anything based on variance
+
+{\scriptsize \color{red}
+\verb%kruskal.test(Sepal.Length ~ Species)%\\
+
+\vspace{1ex}
+\color{blue}
+\verb% Kruskal-Wallis rank sum test%\\
+
+\verb%data:  Sepal.Length by Species %\\
+\verb%Kruskal-Wallis chi-squared = 96.9374, df = 2, p-value < 2.2e-16%\\
+
+\vspace{2ex}
+\color{red}
+\verb%pairwise.wilcox.test(Sepal.Length, Species)%\\
+
+\color{blue}
+\verb% Pairwise comparisons using Wilcoxon rank sum test %\\
+
+\verb%data:  Sepal.Length and Species %\\
+
+\verb%           setosa  versicolor%\\
+\verb%versicolor 1.7e-13 -         %\\
+\verb%virginica  < 2e-16 5.9e-07   %\\
+
+\verb%P value adjustment method: holm %\\
+}
+
+\ei
+

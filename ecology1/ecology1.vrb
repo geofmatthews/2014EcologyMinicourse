@@ -1,0 +1,32 @@
+\frametitle {Advanced Topics} \framesubtitle {R and Dates} 
+
+\bi
+{\scriptsize
+\item Year, month, and day can be converted  with {\tt \red ISOdate} or {\tt \red chron} (discussed in Part 2)
+\item Strings of the form ``2012/05/12'' can be converted with {\tt\red strptime}
+\item If your dates are factors, convert them first with {\tt \red as.character}
+or create them with {\tt \red stringsAsFactors=FALSE}
+\item Resulting objects can be used to plot on the horizontal axis\\
+}
+\ei
+
+\scriptsize
+\begin{Verbatim}[commandchars=\\\{\}]
+\red lake.dates <- ISOdate(lakes$year, lakes$month, lakes$day)
+\red lake.dates[1]
+\blue[1] "2009-08-31 12:00:00 GMT"
+\red lake.dates[1] + 1
+\blue[1] "2009-08-31 12:00:01 GMT"
+\red lake.dates[1] + 24*60*60
+\blue[1] "2009-09-01 12:00:00 GMT"
+\red strptime("2012/5/12", format="%Y/%m/%d")
+\blue[1] "2012-05-12 PDT"
+\red strptime("12/5/12", format="%y/%m/%d")
+\blue[1] "2012-05-12 PDT"
+\red strptime("2012/5/12 13:30:02" , format="%Y/%m/%d %H:%M:%S")
+\blue[1] "2012-05-12 13:30:02 PDT"
+\red datestrings <- c("2012/5/1", "2015/2/22", "2011/12/25")
+\red strptime(datestrings, format="%Y/%m/%d")
+\blue[1] "2012-05-01 PDT" "2015-02-22 PST" "2011-12-25 PST"
+\end{Verbatim}
+

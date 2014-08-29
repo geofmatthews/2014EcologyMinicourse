@@ -1,0 +1,128 @@
+data(iris); attach(iris)
+#################################
+# Simple boxplot (iris data)
+#################################
+op=par(mfrow=c(1,1))
+boxplot(Petal.Width ~ Species)
+par(op)
+dev.print (postscript, "irisboxplot1.ps", horizontal=F, paper="letter")
+#######SavePlot
+
+
+
+boxplot(Sepal.Width ~ Species, 
+   ylab="Sepal Width (cm)", main="Boxplot of Iris Sepal Width",
+   notch = T, boxwex = 0.5,
+   col = c("mistyrose", "skyblue", "orchid"),
+   border=c("hotpink4", "skyblue4", "mediumorchid4"),
+   names = c("Iris setosa", "Iris versicolor", "Iris virginica"))
+dev.print (postscript, "irisboxplot2.ps", horizontal=F, paper="letter")
+
+
+
+
+#############################################3
+# Boxplot Statistics
+#############################################3
+boxplot(Sepal.Width ~ Species, notch=T, plot=F)
+
+#####$stats
+#####     [,1] [,2] [,3]
+#####[1,]  2.9  2.0  2.2   lower whisker
+#####[2,]  3.2  2.5  2.8   lower notch
+#####[3,]  3.4  2.8  3.0   median
+#####[4,]  3.7  3.0  3.2   upper notch
+#####[5,]  4.4  3.4  3.8   upper whisker
+#####
+#####$n
+#####[1] 50 50 50
+#####
+#####$conf
+#####         [,1]     [,2]     [,3]
+#####[1,] 3.288277 2.688277 2.910622
+#####[2,] 3.511723 2.911723 3.089378
+#####
+#####$out
+#####[1] 2.3
+#####
+#####$group
+#####[1] 1
+#####
+#####$names
+#####[1] "setosa"     "versicolor" "virginica"
+
+
+### not used
+### op=par(mfrow=c(1,1))
+### boxplot(Petal.Width ~ Species, notch=T, cex.axis=1,
+###    boxwex=0.75, ylab="Petal Width (cm)",
+###    col=c("pink", "violet", "purple"))
+### text(1.4, 0.2, "hinged notch", cex=1, adj=c(0,0.5)) 
+### text(1.2, 0.5, "outliers (>1.5 x IQR)", cex=1, adj=c(0,0.5)) 
+### par(op)
+### dev.print (postscript, "irisboxplot3.ps", horizontal=F, paper="letter")
+
+
+op=par(mfrow=c(1,1))
+boxplot(Petal.Width ~ Species,
+   xaxt="n", cex.lab=1.5,
+   boxwex=0.5, ylab="Petal Width (cm)",
+   col=c("pink", "violet", "purple"))
+legend(x="topleft", c("Iris setosa", "Iris versicolor", "Iris virginica"),
+   fill=c("pink", "violet", "purple"), cex=1.5, bty="n")
+par(op)
+dev.print (postscript, "irisboxplot4.ps", horizontal=F, paper="letter")
+
+
+################################################
+# Paired Boxplots (ToothGrowth data)
+################################################
+data(ToothGrowth)
+attach(ToothGrowth)
+summary(ToothGrowth)
+
+### Fig1:
+boxplot(len ~ dose,
+     boxwex = 0.25, at = 1:3 - 0.2,
+     subset = supp == "VC", col = "lightyellow",
+     xlab = "Vitamin C dose (mg)",
+     ylab = "Tooth Length (mm?)", ylim = c(0, 35), yaxs = "i")
+boxplot(len ~ dose, add = TRUE,
+     boxwex = 0.25, at = 1:3 + 0.2,
+     subset = supp == "OJ", col = "darkorange")
+legend(x="bottomright", c("Ascorbic acid", "Orange juice"),
+     fill = c("lightyellow", "darkorange"))
+dev.print (postscript, "toothgrowth1.ps", horizontal=F, paper="letter")
+
+
+### Fig2:
+boxplot(len ~ dose,
+     boxwex = 0.25, at = 1:3 - 0.1,
+     subset = supp == "VC", col = "lightyellow",
+     xlab = "Vitamin C dose mg",
+     ylab = "tooth length", ylim = c(0, 35), yaxs = "i")
+boxplot(len ~ dose, add = TRUE,
+     boxwex = 0.25, at = 1:3 + 0.1,
+     xaxt="n",
+     subset = supp == "OJ", col = "darkorange")
+legend(x="topleft", c("Ascorbic acid", "Orange juice"),
+     fill = c("lightyellow", "darkorange"), bty="n")
+dev.print (postscript, "toothgrowth2.ps", horizontal=F, paper="letter")
+
+
+### Fig3:
+with(ToothGrowth,
+     {
+      boxplot(len~supp, border=c("darkorange3", "gold4"),
+              col=c("darkorange", "gold"), boxwex=0.5,
+              ylab="Tooth Growth",
+              names=c("Orange Juice", "Vitamin C"))
+      points(jitter(rep(1:2, each=30), 0.5),
+             unlist(split(len, supp)),
+             cex=1.25, pch=16, 
+             col=c("gold4", "darkorange3")[unclass(ToothGrowth$supp)])
+     })
+dev.print (postscript, "toothgrowth3.ps", horizontal=F, paper="letter")
+
+
+   

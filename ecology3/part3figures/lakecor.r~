@@ -1,0 +1,25 @@
+### DO NOT USE EXACT=F ... BAD EFFECTS ON DATA WITH NO TIES
+birds = read.table("birdcount.csv", T, sep=",")
+attach(birds)
+summary(birds)
+### put first output row in homework
+
+### use this to update first plotting example
+summary(lm(wgrebe ~ year))   #summary of linear model for wgrebe vs. year => SIG
+summary(lm(gwteal ~ year))   #summary of linear model for teal vs. year => ns
+summary(lm(mallard ~ year))  #summary of linear model for mallard vs. year => ns
+summary(lm(pintail ~ year))  #summary of linear model for pintail vs. year => SIG
+summary(lm(amwig ~ year))    #summary of linear model for wigeon vs. year => SIG
+summary(lm(grscaup ~ year))  #summary of linear model for scaup vs. year => ns
+summary(lm(surfsco ~ year))  #summary of linear model for scooter vs. year => SIG
+summary(lm(cgoldey ~ year))  #summary of linear model for goldeneye vs. year => SIG
+summary(lm(buffle ~ year))   #summary of linear model for bufflehead vs. year => ns
+
+
+source("correlation.r")
+birdcor <- correlation.matrix(birds[, c(2:25)], method="kendall")
+birdcor
+
+write.table(birdcor$statistics, "birdcorSTATS.csv", row.names=T, col.names=T, sep=",")
+write.table(birdcor$p.values, "birdcorPVALUES.csv", row.names=T, col.names=T, sep=",")
+

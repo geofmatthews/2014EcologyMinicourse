@@ -1,0 +1,63 @@
+### see lecture notes - used "list" rather than data.frame for predict
+
+##### Data; Y1 = x+50 + noise; Y2 = ln(x) plus noise
+X = c(1:10)
+Y1 = c(49.8,51.6,53.7,53.9,55.1,56.5,57.4,57.9,58.9,60.8)
+Y2 = c(0.021,0.671,1.094,1.390,1.602,1.792,1.950,2.085,2.201,2.311)
+
+
+##### Linear models and predicted values
+Y1fit = lm(Y1~X)
+Y1.predict = predict(Y1fit, list(X=6.7))
+
+Y2fit<-lm(Y2~X)
+Y2fit.trans<-lm(exp(Y2) ~X)
+
+Y2.predict.trans = predict(Y2fit.trans, data.frame(X=6.7)) ###6.724279
+Y2.predict = log(Y2.predict.trans) ###1.905725
+
+
+### Figures for minicourse
+### Y1 (no transformation)
+op=par(mfrow=c(1,1))
+plot(Y1 ~ X, pch=21, bg="red", cex=2, ylab="Y")
+abline(Y1fit, lwd=2, lty=2, col="red")
+legend(x="topleft", c(paste("R-squared =", round(summary(Y1fit)$r.squared, 4)),
+         paste("Adj.R-squared =", round(summary(Y1fit)$adj.r.squared, 4)),
+         paste("p-value =", round(summary(Y1fit)$coef[8], 4))),
+         bty="n", cex=1.25)
+legend(x="bottomright", 
+       c("# Simple syntax:   ", "lm(Y ~ X)", "plot(Y ~ X)", "abline(Yfit)"),
+       text.col="red", bty="n")
+text(2.7, 59, "(P-value <0.00001 =>rounds to 0)", col="red", bty="n", cex=0.7)
+dev.print(postscript, "Y1.ps", horizontal=F, paper="letter")
+
+##### Y2 = ln(X) plus noise
+op=par(mfrow=c(2,2))
+plot(Y2 ~ X, main="Y2 vs X, untransformed",
+     pch=21, bg="red", cex=1.5)
+abline(Y2fit, lwd=2, lty=2, col="red")
+legend(x="topleft", c(paste("Y2 =", round(Y2fit$coef[2],4),
+         "* X + ", round(Y2fit$coef[1], 4)),
+         paste("Adj.R-squared =", round(summary(Y2fit)$adj.r.squared, 4)),
+         paste("p-value =", round(summary(Y2fit)$coef[8], 4))),
+         bty="n", cex=0.7)
+plot(Y2fit$fitted.values, resid(Y2fit), main="Untransformed residuals",
+     pch=21, bg="red", cex=1.5,
+     xlab="Fitted Values", ylab="Residuals")
+abline(h=0, lwd=2, lty=2, col="red")
+
+plot(exp(Y2) ~ X, main="Exp(Y2) vs X",
+     pch=21, bg="red", cex=1.5)
+abline(Y2fit.trans, lwd=2, lty=2, col="red")
+legend(x="topleft", c(paste("Exp(Y2) =", round(Y2fit.trans$coef[2],4),
+         "* X ", round(Y2fit.trans$coef[1], 4)),
+         paste("Adj.R-squared =", round(summary(Y2fit.trans)$adj.r.squared, 4)),
+         paste("p-value =", round(summary(Y2fit.trans)$coef[8], 4))),
+         bty="n", cex=0.7)
+plot(Y2fit.trans$fitted.values, resid(Y2fit.trans), main="Transformed residuals",
+     pch=21, bg="red", cex=1.5,
+     xlab="Fitted Values", ylab="Residuals")
+abline(h=0, lwd=2, lty=2, col="red")
+dev.print(postscript, "Y2.ps", horizontal=F, paper="letter")
+par(op)

@@ -1,0 +1,3612 @@
+Observed reaches:
+ [1]  3  8 13 20 21 22 23 25 27 28 31 33
+Predicted reaches:
+ [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
+Observed distances:
+ [1]  0.03574664  2.15476664  5.81305664  7.90000000  9.37570664 12.01200000 13.31981664 16.00000000
+ [9] 24.72141000 31.85200000 39.69900000
+Predicted distances:
+ [1]  0.04  1.12  2.15  3.35  4.51  5.81  7.09  8.28  9.38 10.72 11.83 13.32 15.25 16.20 17.05 18.62 19.69
+[18] 20.75 22.08 23.44 24.72 26.12 27.46 28.73 30.23 31.85 33.58 34.85 36.57 38.21 39.70 41.00 42.56 44.14
+Sample ID: Temperature..degC. reach: 3 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 3 distance: 39.699 
+N observed: 3434 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.53999 -0.09529 -0.02825  0.10194  0.57061 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                0.256116   0.074616   3.432 0.000878 ***
+observed.sample[[observed.parameter.name]] 0.977436   0.006856 142.564  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1812 on 98 degrees of freedom
+Multiple R-squared:  0.9952,	Adjusted R-squared:  0.9952 
+F-statistic: 2.032e+04 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 667.50  667.50   20324 < 2.2e-16 ***
+Residuals                                  98   3.22    0.03                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 8 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 8 distance: 31.852 
+N observed: 2096 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.52418 -0.15961 -0.02533  0.12983  0.85544 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -0.29526    0.13569  -2.176    0.032 *  
+observed.sample[[observed.parameter.name]]  1.02075    0.01028  99.321   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2567 on 98 degrees of freedom
+Multiple R-squared:  0.9902,	Adjusted R-squared:  0.9901 
+F-statistic:  9865 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 649.84  649.84  9864.7 < 2.2e-16 ***
+Residuals                                  98   6.46    0.07                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 8 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 24.72141 
+N observed: 4275 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.69696 -0.19644 -0.01413  0.15855  0.76652 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -0.57098    0.13689  -4.171 6.56e-05 ***
+observed.sample[[observed.parameter.name]]  1.03084    0.01055  97.713  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.286 on 98 degrees of freedom
+Multiple R-squared:  0.9898,	Adjusted R-squared:  0.9897 
+F-statistic:  9548 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 780.75  780.75  9547.9 < 2.2e-16 ***
+Residuals                                  98   8.01    0.08                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 13 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 13 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 16 
+N observed: 5607 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.7042 -0.2280 -0.0451  0.1494  1.3381 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -0.38783    0.20623  -1.881    0.063 .  
+observed.sample[[observed.parameter.name]]  1.02680    0.01542  66.588   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3472 on 98 degrees of freedom
+Multiple R-squared:  0.9784,	Adjusted R-squared:  0.9782 
+F-statistic:  4434 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 534.51  534.51    4434 < 2.2e-16 ***
+Residuals                                  98  11.81    0.12                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 20 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 20 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 16 
+N observed: 5604 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 21 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 13.31981664 
+N observed: 2436 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.55128 -0.22898 -0.06708  0.19544  1.37222 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 0.41125    0.20238   2.032   0.0449 *  
+observed.sample[[observed.parameter.name]]  0.97114    0.01534  63.304   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3333 on 98 degrees of freedom
+Multiple R-squared:  0.9761,	Adjusted R-squared:  0.9759 
+F-statistic:  4007 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 445.18  445.18  4007.4 < 2.2e-16 ***
+Residuals                                  98  10.89    0.11                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 22 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 22 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 12.012 
+N observed: 8540 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.99008 -0.23482  0.01087  0.22499  0.82106 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 -0.5083     0.1622  -3.134  0.00227 ** 
+observed.sample[[observed.parameter.name]]   1.0310     0.0120  85.885  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3553 on 98 degrees of freedom
+Multiple R-squared:  0.9869,	Adjusted R-squared:  0.9868 
+F-statistic:  7376 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 931.07  931.07  7376.3 < 2.2e-16 ***
+Residuals                                  98  12.37    0.13                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 23 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 23 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 9.37570664 
+N observed: 4274 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.41513 -0.20950 -0.04255  0.30753  1.01821 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -0.23344    0.15252  -1.531    0.129    
+observed.sample[[observed.parameter.name]]  1.01405    0.01176  86.215   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3763 on 98 degrees of freedom
+Multiple R-squared:  0.987,	Adjusted R-squared:  0.9869 
+F-statistic:  7433 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 1052.79 1052.79    7433 < 2.2e-16 ***
+Residuals                                  98   13.88    0.14                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 25 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 25 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 7.9 
+N observed: 301 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 27 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 5.81305664 
+N observed: 4272 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.6487 -0.2607 -0.0280  0.2552  0.8164 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 0.01356    0.14667   0.092    0.927    
+observed.sample[[observed.parameter.name]]  0.99836    0.01096  91.108   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3506 on 98 degrees of freedom
+Multiple R-squared:  0.9883,	Adjusted R-squared:  0.9882 
+F-statistic:  8301 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 1020.53 1020.53  8300.7 < 2.2e-16 ***
+Residuals                                  98   12.05    0.12                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 28 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 28 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 2.15476664 
+N observed: 2953 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.04086 -0.23063 -0.04688  0.21464  1.14894 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -0.14893    0.29977  -0.497     0.62    
+observed.sample[[observed.parameter.name]]  1.01452    0.02017  50.301   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.383 on 98 degrees of freedom
+Multiple R-squared:  0.9627,	Adjusted R-squared:  0.9623 
+F-statistic:  2530 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 371.22  371.22  2530.2 < 2.2e-16 ***
+Residuals                                  98  14.38    0.15                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 31 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 31 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 0.03574664 
+N observed: 3467 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.29431 -0.23775 -0.06414  0.13413  2.33545 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 0.00328    0.28139   0.012    0.991    
+observed.sample[[observed.parameter.name]]  1.00527    0.02022  49.723   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5361 on 98 degrees of freedom
+Multiple R-squared:  0.9619,	Adjusted R-squared:  0.9615 
+F-statistic:  2472 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 710.58  710.58  2472.4 < 2.2e-16 ***
+Residuals                                  98  28.17    0.29                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Temperature..degC. reach: 33 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Temperature..degC. reach: 33 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 3 distance: 39.699 
+N observed: 177 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.66845 -0.18337  0.00923  0.17093  0.75863 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -6.95503    0.65016  -10.70   <2e-16 ***
+observed.sample[[observed.parameter.name]]  1.15915    0.01326   87.41   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2833 on 98 degrees of freedom
+Multiple R-squared:  0.9873,	Adjusted R-squared:  0.9872 
+F-statistic:  7640 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 613.36  613.36  7640.1 < 2.2e-16 ***
+Residuals                                  98   7.87    0.08                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 31.852 
+N observed: 247 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.65983 -0.60775 -0.07025  0.54019  1.90121 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                28.73897    0.64456   44.59   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.58691    0.01089   53.90   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.9005 on 98 degrees of freedom
+Multiple R-squared:  0.9674,	Adjusted R-squared:  0.967 
+F-statistic:  2905 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 2355.42 2355.42  2904.8 < 2.2e-16 ***
+Residuals                                  98   79.46    0.81                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 8 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 24.72141 
+N observed: 142 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.96546 -0.37928  0.01301  0.23996  1.54760 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                17.51518    2.31387    7.57 2.08e-11 ***
+observed.sample[[observed.parameter.name]]  0.76569    0.03226   23.73  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5106 on 98 degrees of freedom
+Multiple R-squared:  0.8518,	Adjusted R-squared:  0.8503 
+F-statistic: 563.3 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 146.835 146.835  563.26 < 2.2e-16 ***
+Residuals                                  98  25.547   0.261                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 13 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 20 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 21 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 13.31981664 
+N observed: 141 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.13128 -0.38201  0.02534  0.35026  1.17826 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                16.08154    2.68018    6.00 3.32e-08 ***
+observed.sample[[observed.parameter.name]]  0.77846    0.03652   21.32  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4989 on 98 degrees of freedom
+Multiple R-squared:  0.8226,	Adjusted R-squared:  0.8208 
+F-statistic: 454.4 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 113.108 113.108  454.44 < 2.2e-16 ***
+Residuals                                  98  24.392   0.249                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 22 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 12.012 
+N observed: 8540 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.5192 -1.0988 -0.1217  1.1969  6.7236 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                29.23193    1.54467   18.92   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.61613    0.02108   29.23   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.237 on 98 degrees of freedom
+Multiple R-squared:  0.8971,	Adjusted R-squared:  0.896 
+F-statistic: 854.2 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 4275.6  4275.6   854.2 < 2.2e-16 ***
+Residuals                                  98  490.5     5.0                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 23 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 9.37570664 
+N observed: 274 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.82149 -0.57369 -0.07556  0.47245  2.14860 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                44.03378    0.75007   58.71   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.39684    0.01171   33.90   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.9935 on 98 degrees of freedom
+Multiple R-squared:  0.9214,	Adjusted R-squared:  0.9206 
+F-statistic:  1149 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 1134.24 1134.24  1149.2 < 2.2e-16 ***
+Residuals                                  98   96.72    0.99                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 25 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 7.9 
+N observed: 301 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 27 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 5.81305664 
+N observed: 2180 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-3.257 -1.380 -0.081  1.273  4.173 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                29.95909    2.07759   14.42   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.59954    0.02726   22.00   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.835 on 98 degrees of freedom
+Multiple R-squared:  0.8316,	Adjusted R-squared:  0.8298 
+F-statistic: 483.8 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 1628.78 1628.78  483.82 < 2.2e-16 ***
+Residuals                                  98  329.92    3.37                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 28 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 2.15476664 
+N observed: 139 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.74161 -0.31846  0.03282  0.27693  0.92309 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                28.53603    2.04148   13.98   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.64143    0.02661   24.11   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3511 on 98 degrees of freedom
+Multiple R-squared:  0.8557,	Adjusted R-squared:  0.8542 
+F-statistic: 581.2 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 71.629  71.629  581.18 < 2.2e-16 ***
+Residuals                                  98 12.078   0.123                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 31 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 0.03574664 
+N observed: 275 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.2557 -0.3498 -0.1823  0.3530  2.1415 
+
+Coefficients:
+                                            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                39.905448   0.587811   67.89   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.526338   0.008248   63.81   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6616 on 98 degrees of freedom
+Multiple R-squared:  0.9765,	Adjusted R-squared:  0.9763 
+F-statistic:  4072 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 1782.5 1782.47  4072.1 < 2.2e-16 ***
+Residuals                                  98   42.9    0.44                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Conductivity..uS.cm.25C. reach: 33 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 3 distance: 39.699 
+N observed: 301 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.25604 -0.07507 -0.00119  0.05190  0.46577 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 1.07740    0.38987   2.763  0.00683 ** 
+observed.sample[[observed.parameter.name]]  0.88502    0.03778  23.424  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1211 on 98 degrees of freedom
+Multiple R-squared:  0.8485,	Adjusted R-squared:  0.8469 
+F-statistic: 548.7 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 8.0446  8.0446  548.67 < 2.2e-16 ***
+Residuals                                  98 1.4369  0.0147                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 31.852 
+N observed: 247 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.22438 -0.08837 -0.03359  0.05430  0.49862 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -2.85140    0.49996  -5.703 1.25e-07 ***
+observed.sample[[observed.parameter.name]]  1.24540    0.04847  25.694  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1397 on 98 degrees of freedom
+Multiple R-squared:  0.8707,	Adjusted R-squared:  0.8694 
+F-statistic: 660.2 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 12.8851 12.8851  660.16 < 2.2e-16 ***
+Residuals                                  98  1.9128  0.0195                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 8 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 24.72141 
+N observed: 142 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.4346 -0.2117 -0.1130  0.1088  0.7631 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 -0.4648     1.2057  -0.385    0.701    
+observed.sample[[observed.parameter.name]]   1.0225     0.1123   9.108 1.04e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2887 on 98 degrees of freedom
+Multiple R-squared:  0.4584,	Adjusted R-squared:  0.4529 
+F-statistic: 82.96 on 1 and 98 DF,  p-value: 1.044e-14
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 6.9140  6.9140  82.956 1.044e-14 ***
+Residuals                                  98 8.1678  0.0833                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 13 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 20 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 21 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 13.31981664 
+N observed: 141 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.3692 -0.2532 -0.1408  0.2393  0.6944 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                  1.7014     1.1675   1.457    0.148    
+observed.sample[[observed.parameter.name]]   0.8400     0.1093   7.687 1.17e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3126 on 98 degrees of freedom
+Multiple R-squared:  0.3762,	Adjusted R-squared:  0.3698 
+F-statistic: 59.09 on 1 and 98 DF,  p-value: 1.172e-11
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 5.7746  5.7746  59.093 1.172e-11 ***
+Residuals                                  98 9.5766  0.0977                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 22 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 23 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 9.37570664 
+N observed: 274 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.6347 -0.1943 -0.1061  0.0700  0.9711 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -1.66399    0.82184  -2.025   0.0456 *  
+observed.sample[[observed.parameter.name]]  1.14286    0.08003  14.280   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3183 on 98 degrees of freedom
+Multiple R-squared:  0.6754,	Adjusted R-squared:  0.6721 
+F-statistic: 203.9 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 20.660 20.6595  203.93 < 2.2e-16 ***
+Residuals                                  98  9.928  0.1013                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 25 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 7.9 
+N observed: 301 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 27 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 5.81305664 
+N observed: 2238 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.6390 -0.3213 -0.0110  0.2240  0.9806 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 1.24489    0.62910   1.979   0.0506 .  
+observed.sample[[observed.parameter.name]]  0.89247    0.05959  14.976   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.396 on 98 degrees of freedom
+Multiple R-squared:  0.6959,	Adjusted R-squared:  0.6928 
+F-statistic: 224.3 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 35.176  35.176  224.29 < 2.2e-16 ***
+Residuals                                  98 15.370   0.157                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 28 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 2.15476664 
+N observed: 299 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.48658 -0.17847 -0.06388  0.17736  0.56558 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 0.63960    0.46930   1.363    0.176    
+observed.sample[[observed.parameter.name]]  0.93535    0.04636  20.174   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2328 on 98 degrees of freedom
+Multiple R-squared:  0.8059,	Adjusted R-squared:  0.804 
+F-statistic:   407 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 22.0651 22.0651  406.98 < 2.2e-16 ***
+Residuals                                  98  5.3132  0.0542                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 31 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 0.03574664 
+N observed: 274 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.35863 -0.20348 -0.07245  0.08422  0.79671 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                -0.88475    0.66503   -1.33    0.186    
+observed.sample[[observed.parameter.name]]  1.07779    0.06544   16.47   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.272 on 98 degrees of freedom
+Multiple R-squared:  0.7346,	Adjusted R-squared:  0.7319 
+F-statistic: 271.3 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 20.0680  20.068   271.3 < 2.2e-16 ***
+Residuals                                  98  7.2492   0.074                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Dissolved.oxygen..mgO2.L. reach: 33 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 3 distance: 39.699 
+N observed: 4 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     1      2      3      4 
+ 0.214  0.001 -0.143 -0.072 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                  7.4710     3.7622   1.986    0.185
+observed.sample[[observed.parameter.name]]   0.4567     0.2817   1.621    0.246
+
+Residual standard error: 0.189 on 2 degrees of freedom
+Multiple R-squared:  0.5678,	Adjusted R-squared:  0.3517 
+F-statistic: 2.628 on 1 and 2 DF,  p-value: 0.2465
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df   Sum Sq  Mean Sq F value Pr(>F)
+observed.sample[[observed.parameter.name]]  1 0.093845 0.093845  2.6276 0.2465
+Residuals                                   2 0.071430 0.035715               
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 31.852 
+N observed: 5 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+        1         2         3         4         5 
+ 0.297879  0.288081 -0.645387  0.054209  0.005219 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)   
+(Intercept)                                 3.38349    1.13349   2.985  0.05836 . 
+observed.sample[[observed.parameter.name]]  0.83347    0.08146  10.232  0.00199 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4439 on 3 degrees of freedom
+Multiple R-squared:  0.9721,	Adjusted R-squared:  0.9629 
+F-statistic: 104.7 on 1 and 3 DF,  p-value: 0.00199
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value  Pr(>F)   
+observed.sample[[observed.parameter.name]]  1 20.6317 20.6317  104.69 0.00199 **
+Residuals                                   3  0.5912  0.1971                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Inorganic.P..ugP.L. reach: 8 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 24.72141 
+N observed: 4 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+       1        2        3        4 
+ 1.35829  0.03185 -0.29180 -1.09834 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                  2.6938    11.6142   0.232    0.838
+observed.sample[[observed.parameter.name]]   0.8832     0.8623   1.024    0.413
+
+Residual standard error: 1.252 on 2 degrees of freedom
+Multiple R-squared:  0.3441,	Adjusted R-squared:  0.01611 
+F-statistic: 1.049 on 1 and 2 DF,  p-value: 0.4134
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value Pr(>F)
+observed.sample[[observed.parameter.name]]  1 1.6458  1.6458  1.0491 0.4134
+Residuals                                   2 3.1375  1.5687               
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 13 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 16 
+N observed: 4 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     1      2      3      4 
+ 1.640  1.471 -1.112 -1.998 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                 10.9052    12.3065   0.886    0.469
+observed.sample[[observed.parameter.name]]   0.1989     0.8945   0.222    0.845
+
+Residual standard error: 2.245 on 2 degrees of freedom
+Multiple R-squared:  0.02412,	Adjusted R-squared:  -0.4638 
+F-statistic: 0.04943 on 1 and 2 DF,  p-value: 0.8447
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value Pr(>F)
+observed.sample[[observed.parameter.name]]  1  0.2492  0.2492  0.0494 0.8447
+Residuals                                   2 10.0826  5.0413               
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 20 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 16 
+N observed: 4 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 21 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 22 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 12.012 
+N observed: 6 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      1       2       3       4       5       6 
+ 1.0375 -0.4226 -0.4867 -0.7950  1.5984 -0.9316 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                                  0.9521     3.6602   0.260   0.8076  
+observed.sample[[observed.parameter.name]]   0.9084     0.2999   3.029   0.0388 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.178 on 4 degrees of freedom
+Multiple R-squared:  0.6964,	Adjusted R-squared:  0.6205 
+F-statistic: 9.176 on 1 and 4 DF,  p-value: 0.03881
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value  Pr(>F)  
+observed.sample[[observed.parameter.name]]  1 12.7235 12.7235  9.1759 0.03881 *
+Residuals                                   4  5.5465  1.3866                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 23 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 9.37570664 
+N observed: 5 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+       1        2        3        4        5 
+ 1.40126  0.06324 -0.76512 -1.20512  0.50574 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                                 -3.3645     3.3741  -0.997   0.3922  
+observed.sample[[observed.parameter.name]]   1.2780     0.2718   4.703   0.0182 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.192 on 3 degrees of freedom
+Multiple R-squared:  0.8806,	Adjusted R-squared:  0.8407 
+F-statistic: 22.12 on 1 and 3 DF,  p-value: 0.01819
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value  Pr(>F)  
+observed.sample[[observed.parameter.name]]  1 31.412 31.4121  22.116 0.01819 *
+Residuals                                   3  4.261  1.4203                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 25 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 27 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 5.81305664 
+N observed: 6 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+       1        2        3        4        5        6 
+ 1.83124 -0.43627 -0.77197  0.13358 -0.70839 -0.04818 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                                 -3.3892     3.5931  -0.943   0.3990  
+observed.sample[[observed.parameter.name]]   1.1839     0.2853   4.150   0.0143 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.08 on 4 degrees of freedom
+Multiple R-squared:  0.8115,	Adjusted R-squared:  0.7644 
+F-statistic: 17.22 on 1 and 4 DF,  p-value: 0.01426
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value  Pr(>F)  
+observed.sample[[observed.parameter.name]]  1 20.0725 20.0725  17.223 0.01426 *
+Residuals                                   4  4.6617  1.1654                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 28 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 2.15476664 
+N observed: 4 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      1       2       3       4 
+ 0.4607 -0.2879 -0.3959  0.2231 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                                 0.03364    3.83088   0.009   0.9938  
+observed.sample[[observed.parameter.name]]  0.98622    0.28688   3.438   0.0752 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5008 on 2 degrees of freedom
+Multiple R-squared:  0.8553,	Adjusted R-squared:  0.7829 
+F-statistic: 11.82 on 1 and 2 DF,  p-value: 0.0752
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value Pr(>F)  
+observed.sample[[observed.parameter.name]]  1 2.96408 2.96408  11.818 0.0752 .
+Residuals                                   2 0.50162 0.25081                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 31 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 0.03574664 
+N observed: 4 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      1       2       3       4 
+ 0.3937 -0.2263  0.3348 -0.5022 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                                 -2.8258     4.9240  -0.574   0.6240  
+observed.sample[[observed.parameter.name]]   1.1617     0.3426   3.391   0.0771 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5341 on 2 degrees of freedom
+Multiple R-squared:  0.8518,	Adjusted R-squared:  0.7777 
+F-statistic:  11.5 on 1 and 2 DF,  p-value: 0.07706
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value  Pr(>F)  
+observed.sample[[observed.parameter.name]]  1 3.2796  3.2796  11.496 0.07706 .
+Residuals                                   2 0.5705  0.2853                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Inorganic.P..ugP.L. reach: 33 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 3 distance: 39.699 
+N observed: 301 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.12618 -0.08732  0.01664  0.06644  0.13708 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 6.56891    0.59691  11.005   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.10882    0.07946   1.369    0.174    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08162 on 98 degrees of freedom
+Multiple R-squared:  0.01878,	Adjusted R-squared:  0.008766 
+F-statistic: 1.875 on 1 and 98 DF,  p-value: 0.174
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq   Mean Sq F value Pr(>F)
+observed.sample[[observed.parameter.name]]  1 0.01249 0.0124938  1.8755  0.174
+Residuals                                  98 0.65284 0.0066616               
+Sample ID: pH reach: 8 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 8 distance: 31.852 
+N observed: 247 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.046017 -0.020007 -0.011289  0.001684  0.151003 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 6.00306    0.28059  21.395  < 2e-16 ***
+observed.sample[[observed.parameter.name]]  0.18912    0.03726   5.076 1.83e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.04133 on 98 degrees of freedom
+Multiple R-squared:  0.2082,	Adjusted R-squared:  0.2001 
+F-statistic: 25.77 on 1 and 98 DF,  p-value: 1.833e-06
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df   Sum Sq  Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 0.044015 0.044015  25.767 1.833e-06 ***
+Residuals                                  98 0.167401 0.001708                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: pH reach: 8 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 24.72141 
+N observed: 425 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.15754 -0.10364 -0.05319  0.06628  0.31504 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 7.85586    0.59942  13.106   <2e-16 ***
+observed.sample[[observed.parameter.name]] -0.04337    0.07993  -0.543    0.589    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1311 on 98 degrees of freedom
+Multiple R-squared:  0.002995,	Adjusted R-squared:  -0.007178 
+F-statistic: 0.2944 on 1 and 98 DF,  p-value: 0.5886
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq   Mean Sq F value Pr(>F)
+observed.sample[[observed.parameter.name]]  1 0.00506 0.0050613  0.2944 0.5886
+Residuals                                  98 1.68479 0.0171917               
+Sample ID: pH reach: 13 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 13 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 20 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 21 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 13.31981664 
+N observed: 141 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.156235 -0.028739  0.003185  0.029910  0.138846 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                  0.6827     0.2576    2.65  0.00938 ** 
+observed.sample[[observed.parameter.name]]   0.9016     0.0338   26.68  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.05578 on 98 degrees of freedom
+Multiple R-squared:  0.879,	Adjusted R-squared:  0.8777 
+F-statistic: 711.6 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 2.21419 2.21419   711.6 < 2.2e-16 ***
+Residuals                                  98 0.30493 0.00311                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: pH reach: 22 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 22 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 12.012 
+N observed: 8539 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.163375 -0.035594 -0.001429  0.032706  0.227201 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 1.69362    0.21485   7.883 4.51e-12 ***
+observed.sample[[observed.parameter.name]]  0.77234    0.02855  27.056  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.05816 on 98 degrees of freedom
+Multiple R-squared:  0.8819,	Adjusted R-squared:  0.8807 
+F-statistic:   732 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 2.47619 2.47619  732.04 < 2.2e-16 ***
+Residuals                                  98 0.33149 0.00338                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: pH reach: 23 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 23 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 9.37570664 
+N observed: 274 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.232726 -0.055553  0.003359  0.034857  0.279496 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 1.18213    0.45674   2.588   0.0111 *  
+observed.sample[[observed.parameter.name]]  0.83574    0.06071  13.765   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.0897 on 98 degrees of freedom
+Multiple R-squared:  0.6591,	Adjusted R-squared:  0.6556 
+F-statistic: 189.5 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 1.52462 1.52462  189.49 < 2.2e-16 ***
+Residuals                                  98 0.78852 0.00805                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: pH reach: 25 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 25 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 7.9 
+N observed: 161 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 27 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 5.81305664 
+N observed: 1791 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.21410 -0.07390 -0.01575  0.05965  0.44787 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 2.35077    0.43595   5.392 4.82e-07 ***
+observed.sample[[observed.parameter.name]]  0.68304    0.05717  11.948  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1225 on 98 degrees of freedom
+Multiple R-squared:  0.5929,	Adjusted R-squared:  0.5888 
+F-statistic: 142.7 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 2.1435 2.14345  142.75 < 2.2e-16 ***
+Residuals                                  98 1.4715 0.01502                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: pH reach: 28 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 28 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 2.15476664 
+N observed: 299 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.074642 -0.017052 -0.002967  0.018889  0.129971 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 1.42779    0.20187   7.073 2.27e-10 ***
+observed.sample[[observed.parameter.name]]  0.79639    0.02686  29.647  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.03245 on 98 degrees of freedom
+Multiple R-squared:  0.8997,	Adjusted R-squared:  0.8987 
+F-statistic: 878.9 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df  Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 0.92536 0.92536  878.94 < 2.2e-16 ***
+Residuals                                  98 0.10318 0.00105                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: pH reach: 31 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 31 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 0.03574664 
+N observed: 274 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.031891 -0.014455 -0.000813  0.013885  0.053411 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                 3.78697    0.21782   17.39   <2e-16 ***
+observed.sample[[observed.parameter.name]]  0.46983    0.02955   15.90   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.01832 on 98 degrees of freedom
+Multiple R-squared:  0.7206,	Adjusted R-squared:  0.7177 
+F-statistic: 252.7 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df   Sum Sq  Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 0.084807 0.084807  252.74 < 2.2e-16 ***
+Residuals                                  98 0.032884 0.000336                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: pH reach: 33 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: pH reach: 33 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 3 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 31.852 
+N observed: 2 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 8 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 13 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 20 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 21 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 22 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 12.012 
+N observed: 8541 
+N predicted: 1425 
+
+Call:
+lm(formula = predictions ~ observed.sample[[observed.parameter.name]])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.6734 -0.3373  0.0067  0.2670  2.5092 
+
+Coefficients:
+                                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                1.779919   0.198260   8.978    2e-14 ***
+observed.sample[[observed.parameter.name]] 0.949194   0.008398 113.026   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6679 on 98 degrees of freedom
+Multiple R-squared:  0.9924,	Adjusted R-squared:  0.9923 
+F-statistic: 1.277e+04 on 1 and 98 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: predictions
+                                           Df Sum Sq Mean Sq F value    Pr(>F)    
+observed.sample[[observed.parameter.name]]  1 5699.1  5699.1   12775 < 2.2e-16 ***
+Residuals                                  98   43.7     0.4                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Sample ID: Flow reach: 23 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 23 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 25 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 27 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 5.81305664 
+N observed: 2 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 28 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 0.03574664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 31 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 0.03574664 
+N observed: 2 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 2.15476664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 5.81305664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 7.9 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 9.37570664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 12.012 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 13.31981664 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 16 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 24.72141 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 31.852 
+N observed: 0 
+Skipping because of insufficient data.
+Sample ID: Flow reach: 33 distance: 39.699 
+N observed: 0 
+Skipping because of insufficient data.

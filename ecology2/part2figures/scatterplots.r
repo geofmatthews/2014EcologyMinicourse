@@ -1,0 +1,145 @@
+lakes = read.table("lakes.csv", T, sep=",")
+attach(lakes)
+
+#### Fig1
+op=par(mfrow=c(2,1))
+plot(tp)
+legend(x="topleft", "plot(tp)", bty="n", cex=1.7, text.col="red")
+legend(x="topright", "Total phosphorus plotted by row", bty="n", cex=1, text.col="blue")
+
+plot(sort(tp))
+legend(x="topleft", "plot(sort(tp))", bty="n", cex=1.7, text.col="red")
+legend(x="topright", 
+       "Total phosphorus sorted by concentration", bty="n", cex=1, text.col="blue")
+par(op)
+dev.print(postscript, "tp1.ps", horizontal=F, paper="letter")
+
+
+#### Fig2 - lines/points/overplot/both
+#op=par(mfrow=c(2,2), mai=c(0.4,0.4,0.4,0.4))  # drops axis labels
+op=par(mfrow=c(2,2))
+
+plot(tp, type="p")
+legend(x="topleft", "plot(tp, type=\"p\")", bty="n", cex=1.5, text.col="red")
+plot(tp, type="l")
+legend(x="topleft", "plot(tp, type=\"l\")", bty="n", cex=1.5, text.col="red")
+plot(tp, type="b")
+legend(x="topleft", "plot(tp, type=\"b\")", bty="n", cex=1.5, text.col="red")
+plot(tp, type="o")
+legend(x="topleft", "plot(tp, type=\"o\")", bty="n", cex=1.5, text.col="red")
+par(op)
+dev.print(postscript, "tp2.ps", horizontal=F, paper="letter")
+
+
+#### Fig3 - characters, line width, simple color
+op=par(mfrow=c(2,2))
+plot(tp, type="p", pch=16, col="blue")
+legend(x="topleft", "plot(tp), pch=16, col=\"blue\")",
+       bty="n", cex=1.2, text.col="red")
+
+plot(tp, type="p", pch=21, bg="skyblue", cex=1.5)
+legend(x="topleft", c("plot(tp), pch=21,", "bg=\"skyblue\", cex=1.5)"),
+       bty="n", cex=1.2, text.col="red")
+
+plot(tp, type="l", lwd=2, col="blue")
+legend(x="topleft", c("plot(tp, type=\"l\",", "lwd=2, col=\"blue\")"), 
+       bty="n", cex=1.2, text.col="red")
+
+plot(tp, type="b", pch=21, bg="skyblue", col="blue")
+legend(x="topleft", 
+       c("plot(tp, type=\"b\", pch=21,", "bg=\"skyblue\", col=\"blue\")"),
+       bty="n", cex=1.2, text.col="red")
+
+dev.print(postscript, "tp3.ps", horizontal=F, paper="letter")
+
+
+#### Fig4 - month/year
+op=par(mfrow=c(2,2))
+plot(month, tp)
+legend(x="topleft", "plot(month, tp)",
+       bty="n", cex=1.2, text.col="red")
+plot(month, tp, xlab="Month", ylab="TP (ug-P/L)")
+legend(x="topleft", 
+       c("plot(month, tp,",
+         "   xlab=\"Month\",",
+         "   ylab=\"TP (ug-P/L)\")"),
+       bty="n", cex=1.2, text.col="red")
+plot(year, tp)
+legend(x="topleft", "plot(year, tp)",
+       bty="n", cex=1.2, text.col="red")
+plot(year, tp, xlab=" ", ylab="TP (ug-P/L)")
+legend(x="topleft", 
+       c("plot(year, tp,",
+         "   xlab=\" \",",
+         "   ylab=\"TP (ug-P/L)\")"),
+       bty="n", cex=1.2, text.col="red")
+dev.print(postscript, "tp4.ps", horizontal=F, paper="letter")
+
+
+### Fig5 - simple/advanced chron plots
+op=par(mfrow=c(2,1))
+library(chron)
+
+mdy.chron <- function(month, day, year) {
+  chron(dates.=paste(month, day, year, sep="/"))
+}
+
+### simple chron plot
+plot(tp ~ mdy.chron(month, day, year))
+legend(x="topleft", "plot(tp ~ mdy.chron(month, day, year)",
+       bty="n", cex=1.2, text.col="red")
+
+xdates = c(mdy.chron(1,1,2007), mdy.chron(12, 31, 2013))
+
+plot(tp ~ mdy.chron(month, day, year),
+     xlim=xdates,
+     xlab=" ",
+     ylim=c(0, 1000),
+     ylab="TP (ug-P/L)",
+     pch=21, bg="skyblue", cex=1.5)
+
+text(x=mdy.chron(6,28,2010), y=800, "Wiser Lake, June 28, 2010",
+     cex=0.75, col="red")
+dev.print(postscript, "tp5.ps", horizontal=F, paper="letter")
+
+
+### Fig6 - two variables (tp, chl) +/- log10 transformations
+op=par(mfrow=c(2,1))
+plot(tp, chl)
+legend(x="topleft", "plot(tp, chl)",
+       bty="n", cex=1.2, text.col="red")
+plot(log10(tp), log10(chl))
+legend(x="topleft", "plot(log10(tp), log10(chl))",
+       bty="n", cex=1.2, text.col="red")
+dev.print(postscript, "tp6.ps", horizontal=F, paper="letter")
+
+
+### Fig7 - legends, text, points, lines, polygons
+op=par(mfrow=c(1,1))
+
+##### Step #1: create an empty plot (type="n"); 
+#####          this will let us place the polygon layer beneath the data
+plot(log10(chl), log10(tp), type="n",
+     xlab=expression(paste("Chl"[log10] ~ (mu * "g/L"))),
+     ylab=expression(paste("TP"[log10] ~ (mu * "g-P/L"))))
+
+##### Step #2: draw a shaded, borderless rectangle showing tp detection limit
+rect(xleft=-1.1, ybottom=-0.5, xright=2.9, ytop=log10(2), col="pink", border=NA)
+
+##### Step #3: add the chlorophyll and total phosphorus data using points
+points(log10(chl), log10(tp),
+     pch=21, bg="skyblue", cex=1.5)
+
+##### Step #4: add a horizontal line at the tp "action" level (20 ug/L)
+abline(h=log10(20), lty=2, lwd=2, col="red")
+
+##### Step #5: use text and legend to annotate the figure;
+#####          paste and expression are used to add math symbols and subscripts
+text(x=2.5, y=0.25, "TP detection limit", cex=0.7, col="red")
+legend(x="topleft", expression("20" * ~ mu * "g-P/L"),
+       lty=2, lwd=2, col="red", bty="n")
+
+dev.print(postscript, "tp7.ps", horizontal=F, paper="letter")
+
+
+

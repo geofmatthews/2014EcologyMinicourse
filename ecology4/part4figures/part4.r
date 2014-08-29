@@ -1,0 +1,88 @@
+#### Principal Components
+data(iris); attach(iris)
+iris.princomp = princomp(iris[, c(1:4)], cor=T) #Basic PCA command
+iris.prcomp = prcomp(iris[, c(1:4)], scale=T, center=T)
+
+iris.prcomp$rotation  ### for princomp: iris.princomp$loading
+iris.prcomp$x          ### for princomp: iris.princomp$scores
+
+setEPS(horizontal=F, paper="special")
+
+op = par(mfrow=c(1,1))
+biplot(iris.prcomp, cex=0.75)
+abline(h=0, col="blue")
+abline(v=0, col="blue")
+legend(x="topright", c("## Modifications ##", 
+       "  abline(h=0)", "  abline(v=0)", "  cex=0.75"),
+   text.col="red", bty="n")
+dev.print(postscript, "irispca1.ps", horizontal=F, paper="letter")
+par(op)
+
+##### Adding variable and sample names
+op = par(mfrow=c(1,1))
+plot(iris.prcomp$x,
+  main="Principal Components Ordination of Iris Samples",
+  pch=c(21,22,24)[unclass(iris$Species)],
+  bg=c("pink", "violet", "purple")[unclass(iris$Species)],
+  cex=1.5)
+abline(h=0); abline(v=0)
+legend(x="topright", c("I. setosa", "I. versicolor", "I. virginica"),
+       pch=c(21, 22, 24), pt.bg=c("pink", "violet", "purple"),
+       bty="n", cex=1)
+dev.print(postscript, "irispca2.ps", horizontal=F, paper="letter")
+par(op)
+
+
+
+#### Hierarchical Clustering
+### euclidean/complete
+data(iris); attach(iris)
+edist = dist(iris[c(1:10, 51:60, 101:110), c(1:4)], method="euclidean")
+edist.complete = hclust(edist, method="complete")
+plot(edist.complete, labels=iris[c(1:10, 51:60, 101:110), 5],
+     ylab="Euclidean Distance", 
+     xlab=" ", main=" ", sub=" ")
+dev.print(postscript, "iriscluster1a.ps", horizontal=F, paper="letter")
+
+#rect.hclust(edist.complete, 3)
+
+
+### euclidean/wards
+edist = dist(iris[c(1:10, 51:60, 101:110), c(1:4)], method="euclidean")
+edist.ward = hclust(edist, method="ward")
+plot(edist.ward, labels=iris[c(1:10, 51:60, 101:110), 5],
+     ylab="Euclidean Distance", 
+     xlab=" ", main=" ", sub=" ", hang=-1)
+dev.print(postscript, "iriscluster2a.ps", horizontal=F, paper="letter")
+
+
+###### Kmeans
+irispart = iris[c(1:10, 51:60, 101:110),] # R shortcut!
+kcluster3 = kmeans(irispart[ , c(1:4)], 3)
+kcluster3  #This produces the cluster summary
+
+plot(irispart[, c(1:4)], col=kcluster3$cluster, pch=unclass(irispart[,5]))
+dev.print(postscript, "iriscluster3.ps", horizontal=F, paper="letter")
+
+
+
+data(iris)
+attach(iris)
+kcluster3.all = kmeans(iris[, c(1:4)], 3)
+plot(Petal.Length, Petal.Width, 
+     pch=c(21, 22, 24)[unclass(Species)],
+     cex=1.7, xlab="Petal Length (cm)", ylab="Petal Width (cm)",
+     main="Kmeans Clustering of Iris Data Into Three Groups",
+     bg=c("pink", "violet", "purple")[kcluster3.all$cluster])
+legend(x="topleft", c("I. setosa", "I. versicolor", "I. virginica"), 
+       pch=c(21, 22, 24), bty="n")
+legend(x="top", c("Group 1", "Group 2", "Group 3"), 
+       fill=c("pink", "violet", "purple"), bty="n")
+legend(x="bottomright", 
+       c("misclassification = 10.7 pct", "(2 versicolor + 14 virginica)"),
+       bty="n")
+table(Species, kcluster3.all$cluster)
+chisq.test(Species, kcluster3.all$cluster)
+dev.print(postscript, "iriscluster4.ps", horizontal=F, paper="letter")
+
+

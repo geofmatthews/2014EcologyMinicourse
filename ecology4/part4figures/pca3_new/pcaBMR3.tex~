@@ -1,0 +1,536 @@
+%%% spell check: feb 12, 2014
+%%%% handouts:  pdfjam --landscape --nup '2x2' pcaBMR3.pdf
+
+
+\documentclass{beamer}
+\mode<presentation>
+{\usetheme{Singapore}
+
+\setbeamercovered{transparent}}
+
+\title{Clustering on Principal Components}
+\author{Lecture 14 - Winter 2014}
+\date{February 24, 2014}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{footline}{\hspace*{5ex}Lecture 14 
+   \hfill Page \insertframenumber \hspace{0.1ex} of
+   \inserttotalframenumber \hspace*{5ex}
+   \vspace*{2ex}}
+
+\begin{document}
+\lecture{Clustering on Principal Components}{Lecture 14}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Microcosm Test Using Contaminated Sediments}
+
+{\scriptsize 
+\begin{itemize}
+\item This example is based on data published by Chariton, et
+  al.~(2014), following the approach described by Ben-Hur and Guyon
+  (2003).
+
+\vspace{1.5ex} 
+
+\item The data are from a sediment toxicity test to determine the
+  effects of triclosan, a commonly used antibiotic/antifungal
+  compound, on sediment biota.
+
+\vspace{1.5ex} 
+\item The biota were identified using molecular markers that
+  identified presence or absence of $>$850 different sediment
+  organisms, listed by {\color{blue} \em operational taxonomic
+    units} (OTUs) rather than genus and species.  The sediment samples
+  contained zero, low, or high concentrations of the toxicant
+  (triclosan),
+
+\vspace{1.5ex} 
+\item The approach represents an alternative to traditional taxonomic
+  assessment (tedious!) because the sediment organisms don't have to
+  be sorted, identified, and enumerated to measure biological
+  diversity.\\
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Preliminary Data Decisions}
+
+{\scriptsize 
+
+\begin{itemize}
+\item The source file contained presence/absence results for 858 OTUs
+  for three treatments (control, low, high) with six replicates per
+  treatment.  As a result, the entire file had only 18 rows.
+
+\vspace{1.5ex} 
+
+\item Nine of the OTUs had identical values for all 18 samples
+  (variance = zero).  These measurements were excluded from the
+  analysis, leaving a data set containing 18 samples and 849 variables.
+
+\vspace{1.5ex}
+
+\item The data were analyzed using PCA based on a singular value
+  decomposition of scaled, centered data matrix ({\color{red} \tt
+    prcomp}). 
+
+\vspace{1.5ex}
+\item Using this type of PCA has several advantages over
+  eigenvector-based PCA, including the ability truncate components if
+  the remaining variance approaches zero. In this case, the PCA
+  truncated at 18 components (residual variance $<$3.3e-15) rather
+  than forcing the use of all 849 components.\\
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Step 1:  Creating New Variables from Component Scores}
+
+{\footnotesize The {\color{red} \tt prcomp} program was used on the
+  entire data set (columns 3:851).  The summary
+  function shows that virtually all variability can be explained
+  using the first 18 principal components (out of 849).\\}
+
+{\tiny \color{red}
+\begin{verbatim}
+#### create the PCA results:
+alldataPCA = prcomp(alldata[, c(3:851)], scale=T)
+summary(alldataPCA)
+\end{verbatim}}
+
+\vspace{-0.3in}
+{\tiny \color{blue}
+\begin{verbatim}
+Importance of components:
+                          PC1   PC2     PC3     PC4    PC5     PC6     PC7
+Standard deviation     10.221 9.880 8.77070 8.08297 7.7312 7.28034 7.03630
+Proportion of Variance  0.123 0.115 0.09061 0.07695 0.0704 0.06243 0.05832
+Cumulative Proportion   0.123 0.238 0.32863 0.40559 0.4760 0.53842 0.59673
+                           PC8     PC9    PC10   PC11    PC12    PC13    PC14
+Standard deviation     6.75020 6.71040 6.52041 6.3837 6.27286 5.86208 5.52219
+Proportion of Variance 0.05367 0.05304 0.05008 0.0480 0.04635 0.04048 0.03592
+Cumulative Proportion  0.65040 0.70344 0.75352 0.8015 0.84786 0.88834 0.92426
+                          PC15    PC16    PC17      PC18
+Standard deviation     5.05834 4.56602 4.22722 3.321e-15
+Proportion of Variance 0.03014 0.02456 0.02105 0.000e+00
+Cumulative Proportion  0.95440 0.97895 1.00000 1.000e+00
+\end{verbatim}}
+
+\vspace{-0.3in}
+{\tiny \color{red}
+\begin{verbatim}
+#### write the scores to a new data set:
+PCA.scores = data.frame(alldata$treatment, alldata$replicate, round(alldataPCA$x, 3))
+write.table(PCA.scores, "alldataPCA.csv", quote=F, row.names=F, col.names=T, sep=",")
+\end{verbatim}}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Variance Plot for First 10 Components}
+
+\begin{center}
+\resizebox{3in}{!}{
+	\includegraphics{PCAvariableplot.ps}}
+
+\vspace*{-4ex}
+{\scriptsize The variance plot is more gradual than most of our previous 
+  examples.\\}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Comparison of Original and New Data Sets}
+
+
+\begin{center}
+{\scriptsize
+\begin{tabular}{ccccc}
+\multicolumn{5}{c}{\bf Original Sediment Microcosm Data (18 rows, 851 columns)}\\
+\multicolumn{5}{c}{ }\\
+Treatment & Replicate & OTC 1  & $\ldots$ & OTC 849\\\hline
+control   & 1         & 0 or 1   &        & 0 or 1\\
+control   & 2         & 0 or 1   &        & 0 or 1\\
+(etc.)    & (etc.)    & (etc.)   &        & (etc.) \\      
+high      & 5         & 0 or 1   &        & 0 or 1\\
+high      & 6         & 0 or 1   &        & 0 or 1\\\hline
+\end{tabular}
+
+\vspace{8ex}
+
+\begin{tabular}{ccccc}
+\multicolumn{5}{c}{\bf Sediment Microcosm PCA Data (18 rows, 20 columns)}\\
+\multicolumn{5}{c}{ }\\
+Treatment & Replicate & PC 1      & $\ldots$ & PC 18\\ \hline
+control   & 1         & -4.97    &        & $<$ $\pm$0.01\\
+control   & 2         & -15.53   &        & $<$ $\pm$0.01\\
+(etc.)    & (etc.)    & (etc.)   &        & (etc.) \\      
+high      & 5         & 13.81    &        & $<$ $\pm$0.01\\
+high      & 6         & 13.10    &        & $<$ $\pm$0.01\\\hline
+\end{tabular}
+
+
+}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Step 2:  Clustering on the Component Scores}
+
+{\scriptsize
+\begin{itemize}
+
+\item This next step requires a good understanding of what you
+  accomplished by ordinating the original data using principal
+  components ({\color{red} \tt princomp} or {\color{red} \tt
+    prcomp}).
+
+\vspace{1.5ex}
+\item A scaled, centered PCA creates a multivariate correlation
+  matrix, with the ``best'' correlations contained in the first
+  component.  Each successive component containing a smaller fraction
+  of ``good'' correlation.
+
+\vspace{1.5ex}
+\item What we want to do is cluster using a small subset of the
+  component scores rather than the entire set of components
+  scores. This allows us to focus on just the good multivariate
+  correlations.
+
+\vspace{1.5ex}
+\item In this example, we had 849 variables (OTUs), but {\color{red}
+  \tt prcomp} stopped the ordination at 18 components, which contain
+  nearly 100\% of the variance.
+
+\vspace{1.5ex}
+\item The next figure shows the dendrogram for clustering the samples
+  using all 18 principal components. I used euclidean distance and
+  Ward's minimum variance clustering method. 
+
+\vspace{1.5ex} Note: We don't want to use all components, but it is a
+good place to start.
+
+\end{itemize}
+}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Dendrogram Results using 18 Components}
+
+\begin{center}
+\resizebox{2.5in}{!}{
+	\includegraphics{hclustPCAall.ps}}
+\end{center}
+
+\vspace*{-5ex}
+{\tiny
+\color{red}
+\begin{verbatim}
+newdata = read.table("alldataPCA.csv", T, sep=","); attach(newdata)
+distances = dist(newdata[, c(3:20)], method="euclidean"); eward = hclust(distances, method="ward")
+plot(eward, labels=treatment, hang=0, cex=0.65, xlab=" ", sub=" ",
+      main="PC1-18 (100%)", ylab="Euclidean Distance")
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Step 3: Identifying Stable Clusters}
+
+{\scriptsize
+\begin{itemize}
+
+\item We want to cluster using fewer than 18 component scores.  But
+  how many should we select?
+
+\item This is actually a rather difficult question, but the short
+  answer is to use the fewest principal components that produce
+  ``stable'' clusters (see Ben-Hur and Guyon, 2003).
+
+\vspace{1.5ex}
+\item Preliminary evaluation of the 18-component clusters reveal that
+  there are only two {\color{blue} \em treatment} responses (high or
+  control/low), not the three that were created by the study design
+  (high, low, control).
+
+\vspace{1.5ex}
+\item Using {\color{red} \tt cuttree} and {\color{red} \tt table}, you
+  can look at the number of misclassifications between the cluster
+  groups and treatment, with misclassification defined as samples that
+  don't match ``high'' or ``control/low.
+
+\vspace{1.5ex}
+\item Cycling through all clustering options (PC1--PC18, PC1--PC17,
+  PC1--PC16, etc), all have exactly 1 misclassification until you
+  cluster using only the first two components (PC1--PC2), which
+  results in 2 misclassifications.
+
+\vspace{1.5ex} 
+
+{\color{blue} \em You only need the first three components to produce
+  stable clusters.}
+
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Dendrogram Results using First Seven Principal Components}
+
+\begin{center}
+\resizebox{4in}{2.8in}{
+	\includegraphics{hclustPCAsubset.ps}}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Step 4: Refining Cluster Membership and Checking Significance}
+
+{\scriptsize
+\begin{itemize}
+
+\item Once we decide on the number of principal components to use
+  (PC1--PC3), it is important to revisit the question of cluster
+  membership.
+
+\item You can see from the next figure that there are two obvious
+  clusters that match treatment groups.  One cluster contains five
+  ``high'' treatment samples and the other cluster contains all of the
+  control and low samples, plus one high outlier.
+
+\vspace{1.5ex}
+\item But in the next figure, note that you could also describe the
+  data using three clusters.  Two of the clusters show treatment
+  effects (high or control/low); the third cluster contains three
+  outlier samples.
+
+\vspace{1.5ex}
+\item In both cases, the associations between clusters and treatment
+  groups are statistically significant (p-value $\le$0.001).
+
+\vspace{1.5ex}
+\item Choosing which way to display the results depends on your
+  overall goals, but it is usually desirable to discuss outliers
+  separately from the treatment effect.
+
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Two-Cluster Dendrogram}
+
+\begin{center}
+\resizebox{4in}{2.5in}{
+	\includegraphics{hclustPCAbest.ps}}
+\end{center}
+
+\vspace*{-5ex}
+{\tiny \color{red}
+\begin{verbatim}
+HCgroups = cutree(eward, 2); chisq.test(HCgroups, treatment)
+\end{verbatim}
+
+\vspace*{-5ex}
+\color{blue}
+\begin{verbatim}
+X-squared = 13.8462, df = 2, p-value = 0.0009848
+\end{verbatim}
+}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Three-Cluster Dendrogram}
+
+\begin{center}
+\resizebox{4in}{2.5in}{
+	\includegraphics{hclustPCAbest3.ps}}
+\end{center}
+
+\vspace*{-5ex}
+{\tiny \color{red}
+\begin{verbatim}
+HCgroups = cutree(eward, 3); chisq.test(HCgroups, treatment)
+\end{verbatim}
+
+\vspace*{-5ex}
+\color{blue}
+\begin{verbatim}
+X-squared = 17.6, df = 4, p-value = 0.001477
+\end{verbatim}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Step 5: Interpreting the Results}
+
+{\scriptsize
+\begin{itemize}
+\item Using this multivariate method, we determined that there were
+  only two treatment responses, not the original three.  In addition,
+  there was a group of outliers from {\em \color{blue} different}
+  treatment groups.
+
+\vspace{1.5ex}
+\item To finish the evaluation, we need to know how the original
+  variables influenced the first three principal components, and how
+  that in turn can be used to describe the cluster groups.
+
+\vspace{1.5ex}
+\item An approach that works with some data sets is to show summary
+  statistics (e.g., minimum, median, maximum) for each cluster
+  group.  But that isn't feasible for presence/absence data.
+
+\vspace{1.5ex}
+\item Another approach is to look at the variable scores for the
+  components used to cluster the data.  Because there were so many
+  OTUs, we need to focus on the ``best'' variables, but defining
+  ``best'' is somewhat arbitrary.
+
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Identifying Important Variables in PC1--PC3}
+
+{\tiny
+\begin{center}
+\begin{tabular}{lc|lc|lc}
+\multicolumn{6}{c}{\bf Best Negative Variable Scores in PC1-PC3}\\
+OTU	& PC1	  & OTU 	& PC2	        & OTU 	        & PC3\\ \hline
+M.5324	& -0.085  & M.521	& -0.087	& M.33548	& -0.082\\
+M.18385	& -0.083  & F.671	& -0.087	& M.29634	& -0.076\\
+M.17875	& -0.083  & uk.euk.3152	& -0.087	& uk.euk.29604	& -0.074\\
+M.34715	& -0.083  & S.3978	& -0.087	& M.10729	& -0.074\\
+M.25065	& -0.082  & S.7008	& -0.087	& M.4300	& -0.073\\
+M.28527	& -0.082  & M.7687	& -0.087	& R.848	        & -0.071\\
+uk.euk.6428 & -0.082 & S.9894	& -0.087	& uk.euk.6422	& -0.071 \\
+M.1091	& -0.081  & S.10341	& -0.087	& S.947	        & -0.071\\
+M.15718	& -0.080  & S.13318	& -0.087	& uk.euk.11428	& -0.071\\
+M.25537	& -0.079  & S.15201	& -0.087	& uk.euk.4378	& -0.071\\ \hline
+\multicolumn{6}{l}{ }\\					
+\multicolumn{6}{l}{ }\\					
+\multicolumn{6}{c}{\bf Best Positive Variable Scores in PC1-PC3}\\
+OTU	& PC1	  & OTU 	& PC2	        & OTU 	        & PC3\\ \hline
+R.1633	& 0.056	& F.35789	& 0.037	& M.20011	& 0.075\\
+M.37505	& 0.056	& uk.euk.28316	& 0.037	& R.27994	& 0.075\\
+R.28351	& 0.056	& M.588	        & 0.038	& A.25541	& 0.075\\
+M.37021	& 0.057	& M.25299	& 0.039	& M.29451	& 0.075\\
+M.37060	& 0.060	& uk.euk.35868	& 0.040	& M.26907	& 0.075\\
+S.3563	& 0.065	& M.10534	& 0.040	& M.35148	& 0.076\\
+R.9197	& 0.066	& M.15282	& 0.041	& M.35761	& 0.080\\
+Am.5381	& 0.068	& S.37132	& 0.044	& uk.euk.8723	& 0.081\\
+A.11234	& 0.073	& M.4361	& 0.048	& uk.euk.4435	& 0.084\\
+R.30870	& 0.077	& M.5776	& 0.052	& uk.euk.5340	& 0.088\\\hline
+\end{tabular}
+\end{center}
+}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+\framesubtitle{Plotting the Samples by PCA Scores}
+
+{\scriptsize
+\begin{itemize}
+\item Referring back to the first PCA lecture, note how you can plot
+  the variable loading scores to see how the variables influence the
+  ordination, and you can plot the sample scores to see how the
+  samples are separated on the component axes.
+
+\vspace{1.5ex}
+\item The next figure shows sample plotting on PC1--PC3.  This reveals
+  that most of the treatment separation, which resulted in good
+  clustering into two treatment groups, occurred on PC1.  
+
+\vspace{1.5ex}
+\item {\em \color{blue} PC2 and PC3 were almost entirely used for
+  separating the outliers.}
+
+\vspace{1.5ex}
+\item  Now that we know the specific samples that created the
+  outlier cluster (H4, L1, and L6), we could use the table of ``best''
+  variables in PC2 and PC3 to try to determine why these three samples
+  did not respond in the same way as the other samples.
+
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Clustering on Principal Components}
+
+\begin{center}
+\resizebox{4.5in}{2.5in}{
+	\includegraphics{PCAsampleplot.ps}}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{References}
+
+\begin{itemize}
+{\scriptsize
+\item Ben-Hur, A.~and I.~Guyon.  2003.  Detecting stable clusters
+  using principal component analysis in methods in molecular biology.
+  In Brownstein, M.~J.~and A.~Kohodursky, eds, {\em Functional Genomics:  Methods and Protocols.}, Humana Press, Totowa, NJ, pp 159--182.
+
+\vspace{1.5ex}
+\item Chariton, A.~A., K.~T.~Ho, D.~Proestou, H.~Bik, S.~L.~Simpson,
+  L.~M.~Portis, M.~G.~Cantwell, J.~G.~Baguley, R.~M.~Burgess,
+  M.~M.~Pelletier, M.~Perron, C.~Gunsch, and R.~A.~Matthews.  2014.  A
+  molecular-based approach for examining responses of eukaryotes in
+  microcosms to contaminant-spiked estuarine sediments.  {\em Environmental
+  Toxicology and Chemistry} 33:359--369.\\ }
+\end{itemize}
+\end{frame}
+\end{document}
+\end

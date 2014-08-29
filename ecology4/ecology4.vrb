@@ -1,0 +1,12 @@
+\frametitle{Plotting the Samples by PCA Scores}
+
+\begin{center}
+\resizebox{4.5in}{2.5in}{
+\includegraphics{./part4figures/pca3_new/PCAsampleplot.ps}}
+
+{\scriptsize
+PC1 separated the two treatment groups; PC2 and PC3 were useful for separating
+  the outliers\\
+}
+\end{center}
+
