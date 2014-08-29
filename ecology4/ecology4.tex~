@@ -283,16 +283,13 @@ the relationship (correlation) for each variable on  PC1-PC4
 \begin{frame}[fragile]
 \frametitle{Principal Components Analysis - Iris Data}
 \framesubtitle{Using {\tt \color{red} biplot} to Show Sample and Variable Loading}
-
 \begin{center}
-%%%% JUST ADD [clip] !
 \resizebox{2.5in}{!}{
-	\includegraphics[clip]{./part4figures/irispca1.ps}}
-%%%% NEW SIMPLER WAY TO SCALE, replace the above two lines with:
-%\includegraphics[clip,width=2.5in]{./part4figures/irispca1.ps}
+	\includegraphics{./part4figures/irispca1.ps}}
+
 \end{center}
 
-%\vspace{-0.2in} 
+\vspace{-0.2in} 
 {\scriptsize You can quickly examine sample and variable loading using the
   command {\color{red} \tt biplot(iris.prcomp)}.  The numbers
   indicate rows (iris samples) and the arrows show the 
@@ -343,7 +340,7 @@ the relationship (correlation) for each variable on  PC1-PC4
 
 \begin{center}
 \resizebox{3in}{!}{
-	\includegraphics[clip]{./part4figures/irispca2.ps}}
+	\includegraphics{./part4figures/irispca2.ps}}
 
 \end{center}
 
@@ -711,7 +708,7 @@ example, we ask for 3 groups to match our assumption that each of the
 \framesubtitle{Scatterplot Matrix Showing KMeans 3-Group Clusters}
 \begin{center}
 \resizebox{2.5in}{!}{
-	\includegraphics[clip]{./part4figures/iriscluster3.ps}}
+	\includegraphics{./part4figures/iriscluster3.ps}}
 \end{center}
 
 \vspace{-3ex}
@@ -765,12 +762,9 @@ example, we ask for 3 groups to match our assumption that each of the
 
 
 \begin{frame}
-\frametitle{Divisive Clustering - Iris Data}
-\framesubtitle{Plotting Results Using Best Two Variables; Adding Association Analysis}
 \begin{center}
-%\resizebox{3in}{!}{
-%	\includegraphics[clip]{./part4figures/iriscluster4.ps}}
-\includegraphics[clip,width=3in]{./part4figures/iriscluster4.ps}
+\resizebox{3in}{!}{
+	\includegraphics{./part4figures/iriscluster4.ps}}
 \end{center}
 \end{frame}
 
@@ -982,7 +976,7 @@ high      & 6         & 13.10    &        & $<$ $\pm$0.01\\\hline
 
 
 \begin{frame}[fragile]
-\frametitle{Clustering on Principal Components}
+\frametitle{Clustering on Principal Components FOO}
 \framesubtitle{Dendrogram Results using First Seven Principal Components}
 
 \begin{center}
